@@ -1,0 +1,23 @@
+
+.designHome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    width: 100vw;
+
+    background-color: lightseagreen;
+}
+
+.designBotonHome {
+    height: 5em;
+    width: 10em;
+
+    background-color: red;
+}
+
+.designBotonHome:hover{
+    background-color: brown;
+}
