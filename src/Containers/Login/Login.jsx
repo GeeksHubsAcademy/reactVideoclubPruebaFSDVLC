@@ -51,12 +51,12 @@ const Login = () => {
 
         //Es peligroso cambiar hooks aqui, si no tenemos condicionales que eviten
         //que entremos en bucles infinitos.
-        console.log("Credenciales vale....", credenciales);
+        // console.log("Credenciales vale....", credenciales);
 
         if(credenciales?.token !== undefined){
 
             setTimeout(()=>{
-                navigate("/profile");
+                navigate("/");
             }, 3000);
         };
 
@@ -74,7 +74,7 @@ const Login = () => {
                  password: datosUsuario.password
             }
 
-            let resultado = await axios.post("AQUI VA EL ENDPOINT",body);
+            let resultado = await axios.post("https://movie-db-geekshubs.herokuapp.com/usuarios/login",body);
 
             //Cambiamos el valor del hook credenciales, por lo tanto se recargará el componente
             if(resultado.data === "Usuario o contraseña inválido"){
